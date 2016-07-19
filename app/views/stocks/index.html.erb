@@ -1,0 +1,9 @@
+<h1>Stocks</h1>
+
+<% @url %>
+Temperature: <%= @weather["main"]["temp"] %>
+<%= form_tag(root_path, method: "get") do %>
+      <%= label_tag(:weather, "Search for:") %>
+      <%= text_field_tag(:weather) %>
+      <%= submit_tag("Search") %>
+    <% end %>
